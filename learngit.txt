@@ -1,0 +1,77 @@
+    Git is free open source destributes version control system designed
+to handle everything from small to large project with speed and efficiency.
+And git tracking changes files in working area (file in repository or folder).
+It designed for coordinating work among teams.
+    
+    How to uses Git.
+
+    1.Install Git and create Github accout.
+    2.Create repository(folder) 
+        
+        mkdir (folder name)
+    
+    3.In repository or folder we make initialize repository with git init.
+        
+        git init
+    
+    4.In repository we will create file in it. If we need track file we must to tracking  file and staging with command 
+       git add  
+
+    5.When we edit file that we add. We must commit and append message when we commit.
+
+        git commit -m "your message about commit"
+
+    6.Create New Branch
+      Now that you've made a new commit let's try something a little more advanced.
+      Say you want to making changes to the main project while developing the feature.
+      This is where git branches come in. Branches allow you to move back and forth
+      between 'states' of a project. For instance,if you want to add a new page to your website 
+      you can create a new branch just for that page without affecting the main part
+      of the project. Once you're done with the page,you can merge your changes from your branch
+      from your branch in to primary branch. When you create a new branch,Git keep track of which commit your branch 'branched'
+      off of,so it knows the history behind all the files. 		
+
+    https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
+    เรียนรู้พื้นฐานการใช้งาน GIT AND GITHUB patihan phengpeo
+	
+	All git command and usage      
+    ขั้นตอนการใช้งาน git
+    
+    1. set git config
+    In the repository 
+    e:\repository>git config --global user.name "user name"
+    e:\repository>git config --global user.email name@gmail.com
+    
+    Again,you need to do this only once if you pass the --global option,because then Git will
+    use that infomation for anything you do on that system. If you want to override this a different name or
+    email addrees for specific projects,you can run the command without the --global option when you're in that project.
+
+    2. Getting a Git repository
+    You typically obtain a Git repository in one of two ways:
+      1.You can take a local directory that is currently not under version control,and turn it in to a git
+        repository,or
+      2.You can clone an existing Git repository from elsewhere.
+
+    3.initialize a Repository in an Existing directory.
+    If you have a project directory that is currently not under version control and you want to start controlling it with Git,
+    you first need togo to that project's directory. If you've never done this,it looks a little
+    different depending on which system you're runnig:
+    
+    c:>cd c:/Users/user/my_project
+    c:>git init
+
+    This creates a new subbdirectory named .git that contains all of your necessary repository files
+    a Git repository skeleton. At this point,nothing in your project is tracked yet. See Git Internals for more information about exactly what files are contained in the .git 
+    directory you just created.
+
+    If you want to start version-controlling existing files (as opposed to an empty directory),you should probably begin tracking those files and do an initial commit. You can accomplish that 
+    with a few git add commands that specify the files you want to track,followed by a git commit:
+
+    c:>git add *.c
+    c:>git add LICENSE
+    c:>git commit -m 'Initial project version'
+
+    We'll go over what these commands do in just a minute. At this point.you have a Git repository with
+    tracked files and an initial commit.
+    https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
+
