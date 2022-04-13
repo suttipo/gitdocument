@@ -75,3 +75,69 @@ It designed for coordinating work among teams.
     tracked files and an initial commit.
     https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
 
+
+    https://campus.datacamp.com/courses/introduction-to-git/basic-workflow?ex=7
+    How can I tell what's going to be committed?
+
+    git diff -r HEAD path file
+
+    git diff -r HEAD learngit.txt
+
+    Interlude: how can I edit a file?
+
+Unix has a bewildering variety of text editors. In this course, 
+we will sometimes use a very simple one called Nano. If you type nano filename, 
+it will open filename for editing (or create it if it doesn't already exist). 
+You can then move around with the arrow keys, delete characters with the backspace key, 
+and so on. You can also do a few other operations with control-key combinations:
+
+Ctrl-K: delete a line.
+Ctrl-U: un-delete a line.
+Ctrl-O: save the file ('O' stands for 'output').
+Ctrl-X: exit the editor.
+
+The command git log is used to view the log of the project's history. 
+Log entries are shown most recent first, and look like this:
+
+git  log;
+commit 0430705487381195993bac9c21512ccfb511056d
+Author: Rep Loop <repl@datacamp.com>
+Date:   Wed Sep 20 13:42:26 2017 +0000
+
+    Added year to report title.
+The commit line displays a unique ID for the commit called a hash; 
+we will explore these further in the next chapter. The other lines tell you who made the change, 
+when, and what log message they wrote for the change.
+When you run git log, Git automatically uses a pager to show one screen of 
+output at a time. Press the space bar to go down a page or the 'q' key to quit.
+
+How can I view a specific file's history?
+A project's entire log can be overwhelming, so it's often useful to inspect 
+only the changes to particular files or directories. You can do this using git log path, 
+where path is the path to a specific file or directory. 
+The log for a file shows changes made to that file; the log for a directory shows 
+when files were added or deleted in that directory, 
+rather than when the contents of the directory's files were changed.
+
+You have been put in the dental repository. Use git log to display only the changes made to data/southern.csv. 
+How many have there been?
+
+git log data/southern.csv;
+
+commit 29a59811032295e8bb3ddbbde5bb1e0ca59fb0c6
+Author: Rep Loop <repl@datacamp.com>
+Date:   Thu Jul 15 17:05:49 2021 +0000
+
+    Adding fresh data for southern and western regions.
+
+commit ac3bd16fbb319b0e9b6da119ce89a9fc2c99496d
+Author: Rep Loop <repl@datacamp.com>
+Date:   Thu Jul 15 17:05:49 2021 +0000
+
+    Added seasonal CSV data files
+
+    Where does Git store information?
+    Git stores all of its extra information in a directory called .git located 
+    in the root directory of the repository. Git expects this information 
+    to be laid out in a very precise way, so you should never edit or delete anything in .git.
+    
